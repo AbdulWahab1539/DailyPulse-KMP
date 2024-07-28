@@ -9,7 +9,7 @@ Finally, it contains third screen to display information regarding the user's de
 
 ## App Demo 
 
-<video src="https://github.com/user-attachments/assets/7cd78a4f-157d-4b82-b0db-4393aa1bbaa6" width="300" />
+<video src="https://github.com/user-attachments/assets/7cd78a4f-157d-4b82-b0db-4393aa1bbaa6" width="300" ></video>
 
 ## Tech Stack
 
