@@ -61,7 +61,9 @@ kotlin {
             }
         }
     }
+    task("testClasses")
 }
+
 
 android {
     namespace = "com.abdul.dev.dailypulse"

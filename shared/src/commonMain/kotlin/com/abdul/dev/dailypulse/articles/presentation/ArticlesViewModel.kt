@@ -1,8 +1,8 @@
 package com.abdul.dev.dailypulse.articles.presentation
 
 import com.abdul.dev.dailypulse.BaseViewModel
-import com.abdul.dev.dailypulse.articles.application.Article
-import com.abdul.dev.dailypulse.articles.application.ArticlesUseCase
+import com.abdul.dev.dailypulse.articles.domain.Article
+import com.abdul.dev.dailypulse.articles.domain.ArticlesUseCase
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

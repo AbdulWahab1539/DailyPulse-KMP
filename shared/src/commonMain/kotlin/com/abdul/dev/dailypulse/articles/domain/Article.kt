@@ -1,4 +1,4 @@
-package com.abdul.dev.dailypulse.articles.application
+package com.abdul.dev.dailypulse.articles.domain
 
 data class Article(
     val title: String,

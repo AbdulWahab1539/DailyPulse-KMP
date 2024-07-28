@@ -1,4 +1,4 @@
-package com.abdul.dev.dailypulse.articles.application
+package com.abdul.dev.dailypulse.articles.domain
 
 import com.abdul.dev.dailypulse.articles.data.ArticlesRepository
 import com.abdul.dev.dailypulse.articles.data.ArticleRaw

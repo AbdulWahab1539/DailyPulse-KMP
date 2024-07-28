@@ -13,6 +13,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.List
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -32,7 +33,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 
-import com.abdul.dev.dailypulse.articles.application.Article
+import com.abdul.dev.dailypulse.articles.domain.Article
 import com.abdul.dev.dailypulse.articles.presentation.ArticlesViewModel
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.SwipeRefreshState
@@ -41,12 +42,13 @@ import org.koin.androidx.compose.getViewModel
 @Composable
 fun ArticlesScreen(
     onAboutButtonClick: () -> Unit,
+    onSourcesButtonClick: () -> Unit,
     articlesViewModel: ArticlesViewModel = getViewModel(),
 ) {
     val articlesState = articlesViewModel.articlesState.collectAsState()
 
     Column {
-        AppBar(onAboutButtonClick)
+        AppBar(onAboutButtonClick, onSourcesButtonClick)
 
         /* if (articlesState.value.loading)
              Loader()*/
@@ -61,10 +63,17 @@ fun ArticlesScreen(
 @Composable
 private fun AppBar(
     onAboutButtonClick: () -> Unit,
+    onSourcesButtonClick: () -> Unit,
 ) {
     TopAppBar(
         title = { Text(text = "Articles") },
         actions = {
+            IconButton(onClick = onSourcesButtonClick) {
+                Icon(
+                    imageVector = Icons.Outlined.List,
+                    contentDescription = "Sources Button",
+                )
+            }
             IconButton(onClick = onAboutButtonClick) {
                 Icon(
                     imageVector = Icons.Outlined.Info,

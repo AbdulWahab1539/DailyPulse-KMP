@@ -1,6 +1,6 @@
 package com.abdul.dev.dailypulse.articles.presentation
 
-import com.abdul.dev.dailypulse.articles.application.Article
+import com.abdul.dev.dailypulse.articles.domain.Article
 
 data class ArticlesState(
     val articles: List<Article> = listOf(),

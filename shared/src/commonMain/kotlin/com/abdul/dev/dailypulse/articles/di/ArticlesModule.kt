@@ -3,7 +3,7 @@ package com.abdul.dev.dailypulse.articles.di
 import com.abdul.dev.dailypulse.articles.data.ArticlesDataSource
 import com.abdul.dev.dailypulse.articles.data.ArticlesRepository
 import com.abdul.dev.dailypulse.articles.data.ArticlesService
-import com.abdul.dev.dailypulse.articles.application.ArticlesUseCase
+import com.abdul.dev.dailypulse.articles.domain.ArticlesUseCase
 import com.abdul.dev.dailypulse.articles.presentation.ArticlesViewModel
 import org.koin.dsl.module
 
