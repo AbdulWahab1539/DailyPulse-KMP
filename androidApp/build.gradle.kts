@@ -32,6 +32,8 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+        // Enable desugaring
+        isCoreLibraryDesugaringEnabled = true
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -39,9 +41,11 @@ android {
 }
 
 dependencies {
+
+    // Add desugaring library
+    coreLibraryDesugaring ("com.android.tools:desugar_jdk_libs:2.1.5") // Use latest version
     debugImplementation(libs.compose.ui.tooling)
     implementation(projects.shared)
-    implementation(libs.coil)
     implementation(libs.coil.compose)
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling.preview)
